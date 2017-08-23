@@ -1,0 +1,206 @@
+@import url("reset.css");
+
+* { box-sizing: border-box; }
+a { text-decoration: none; }
+
+body {
+  margin: 10px;
+  font: normal 16px 'Roboto', sans-serif;
+}
+
+
+/* HEADER */
+header h1 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+a.logo {
+  display: block;
+  width: 350px;
+  height: 100px;
+  margin: 0 auto;
+  text-indent: -9999px;
+  background: url("../images/logo.svg") 0 0 no-repeat;
+}
+
+/* MAIN */
+.loading {
+  font-size: 100px;
+  text-align: center;
+}
+
+.page {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.property {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 400px;
+  height: 450px;
+  margin: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.property:nth-child(3n + 1) { margin-left: 0; }
+.property:nth-child(3n + 3) { margin-right: 0; }
+
+.purpose {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 10px;
+  color: #b3b3b3;
+  font-weight: 500;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+
+.property img { width: 100%; }
+figcaption { padding: 20px 30px; }
+
+.title {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.location {
+  position: absolute;
+  bottom: 100px;
+  margin: 20px 0;
+  color: #b3b3b3;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.price {
+  font-weight: 500;
+  margin-right: 100px;
+}
+
+.price,
+.space {
+  position: absolute;
+  bottom: 30px;
+}
+
+.space {
+  right: 30px;
+  color: #b3b3b3;
+}
+
+.rooms {
+  padding-right: 5px;
+  margin-right: 5px;
+  border-right: 2px solid #b3b3b3;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.prev,
+.next {
+  padding: 10px 20px;
+  margin: 0 20px;
+  color: white;
+  font-weight: 700;
+  background: #feB901;
+  border: 0;
+  border-bottom: 5px solid #fcd774;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+  background: #fcd774;
+}
+
+.page-number {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* FOOTER */
+footer {
+  margin: 20px 0;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid black;
+}
+
+@media (max-width: 1400px) {
+  .page { width: 1100px; }
+
+  .property {
+    width: 525px;
+    margin: 25px;
+  }
+
+  .property:nth-child(3n + 1) { margin-left: 25px; }
+  .property:nth-child(3n + 3) { margin-right: 25px; }
+  .property:nth-child(odd) { margin-left: 0; }
+  .property:nth-child(even) { margin-right: 0; }
+  .location { bottom: 70px; }
+}
+
+@media (max-width: 1150px) {
+  .page { width: 900px; }
+  .property { width: 425px; }
+  .location { bottom: 90px; }
+}
+
+@media (max-width: 950px) {
+  .loading { font-size: 50px; }
+  .page { width: 700px; }
+
+  .property {
+    width: 325px;
+    height: 400px;
+  }
+
+  .location { bottom: 90px; }
+
+  .space {
+    right: initial;
+    left: 30px;
+    bottom: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page { width: 80%; }
+
+  .property {
+    width: 100%;
+    height: 500px;
+  }
+
+  .property { margin: 25px 0; }
+  .property:nth-child(3n + 1) { margin-left: 0; }
+  .property:nth-child(3n + 3) { margin-right: 0; }
+  .location { position: static; }
+}
+
+@media (max-width: 650px) {
+  .property { height: 400px; }
+  .location { margin: 5px 0 0 0; }
+}
+
+@media (max-width: 450px) {
+  a.logo { width: 300px; }
+  .property { height: 370px; }
+
+  .space {
+    left: 30px;
+    bottom: 7px;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>McMakler Frontend Test</title>
+    <script src="https://use.fontawesome.com/1bf4fd8dbf.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a class="logo" href="https://www.mcmakler.de/" target="_blank">McMakler</a>
+      </h1>
+    </header>
+
+    <main class="page">
+      <div id="content">
+        <div class="loading">
+          <i class="fa fa-spinner fa-spin"></i>
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Created by <a href="https://github.com/ncaron/" target="_blank">Niko Caron</a> for <a href="https://www.mcmakler.de/" target="_blank">McMakler</a>
+      </p>
+    </footer>
+
+    <script type="text/template" id="property-template">
+      <div class="property">
+        <figure>
+          <p class="purpose">{{PURPOSE}}</p>
+          <img src="{{IMAGE}}" alt="Property">
+        </figure>
+
+        <figcaption>
+          <h2 class="title">{{TITLE}}</h2>
+          <p class="location">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            {{LOCATION}}
+          </p>
+          <span class="price">
+            <i class="fa fa-money" aria-hidden="true"></i>
+            {{PRICE}} &euro;
+          </span>
+
+          <div class="space">
+            <span class="rooms">
+              <i class="fa fa-bed" aria-hidden="true"></i>
+                {{ROOMS}} Zimmer
+              </span>
+            <span class="living">ab {{SPACE}} m<sup>2</sup></span>
+          </div>
+        </figcaption>
+      </div>
+    </script>
+
+    <script type="text/template" id="pagination-template">
+      <div class="pagination">
+        <button class="prev">PREV</button>
+        <span class="page-number">{{PAGENUMBER}}</span>
+        <button class="next">NEXT</button>
+      </div>
+    </script>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
