@@ -59,6 +59,7 @@ class Property {
   constructor(property, template) {
     this.property = property;
     this.propertyHTML = template;
+    this.id = property.additionalId;
     this.purpose = this.getPurpose();
     this.title = property.title;
     this.location = property.realestateSummary.address.street;
@@ -85,6 +86,7 @@ class Property {
   }
 
   createPropertyHTML() {
+    this.propertyHTML = this.propertyHTML.replace(/{{ID}}/g, this.id);
     this.propertyHTML = this.propertyHTML.replace(/{{PURPOSE}}/g, this.purpose);
     this.propertyHTML = this.propertyHTML.replace(/{{TITLE}}/g, this.title);
     this.propertyHTML = this.propertyHTML.replace(/{{LOCATION}}/g, this.location);
