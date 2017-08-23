@@ -26,3 +26,6 @@ Users can click on the 'PREV' and 'NEXT' buttons to go to the previous or next p
 * run `install-peerdeps --dev eslint-config-airbnb-base`
 * Install [this chrome extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) to allow cross-origin requests.
 * run `gulp`
+
+## [demo](https://ncaron.github.io/frontend_interview_test_mcmakler/src/)
+Please download the Chrome extension above.
